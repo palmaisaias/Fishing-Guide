@@ -1,0 +1,44 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations */
+
+/* Fade In */
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.animate-fadeInSlow {
+  animation: fadeIn 2.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shorter fade-in animations for better performance */
+.fade-in-fast {
+  opacity: 0;
+  animation: fadeInFast 0.7s forwards;
+}
+
+.fade-in-fast-delayed {
+  opacity: 0;
+  animation: fadeInFast 0.7s forwards 0.3s; /* Delayed start by 0.3s */
+}
+
+@keyframes fadeInFast {
+  to {
+    opacity: 1;
+  }
+}
